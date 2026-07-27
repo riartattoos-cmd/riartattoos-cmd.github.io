@@ -76,10 +76,25 @@ color:#aaa;
     padding:20px;
     background:#000;
 }
-
 .hero-logo{
-    width:220px;
-    margin-bottom:20px;
+    width:280px;
+    max-width:90%;
+    display:block;
+    margin:0 auto 30px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin:20px 0;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
 }
 
 .hero h1{
