@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +75,7 @@ transform:scale(1.05);
 section{
 padding:80px 20px;
 text-align:center;
-max-width:900px;
+max-width:1000px;
 margin:auto;
 }
 
@@ -97,6 +98,21 @@ margin:18px 0;
 font-size:22px;
 line-height:1.8;
 margin:15px 0;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery-grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+border:2px solid #d4af37;
 }
 
 footer{
@@ -163,20 +179,22 @@ BOOK NOW
 amanriar765@gmail.com</p>
 
 </section>
+
 <section class="gallery">
 
 <h2>Our Work</h2>
 
 <div class="gallery-grid">
 
-<img src="sketch1jpg.webp">
-<img src="sketch2jpg.webp">
-<img src="sketch3jpg.webp">
-<img src="sketch4jpg.webp">
+<img src="sketch1jpg.webp" alt="Sketch 1">
+<img src="sketch2jpg.webp" alt="Sketch 2">
+<img src="sketch3jpg.webp" alt="Sketch 3">
+<img src="sketch4jpg.webp" alt="Sketch 4">
 
 </div>
 
 </section>
+
 <footer>
 
 © 2026 RIAR TATTOOS
