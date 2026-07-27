@@ -64,7 +64,7 @@ color:#d4af37;
     padding:120px 20px 80px;
     background:
         linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
-        url("amani.png?v=2")
+        url("amani.png?v=2");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -73,7 +73,6 @@ color:#d4af37;
 .hero-content{
     position:relative;
     z-index:2;
-}
 }
 .hero h1{
 font-family:'Cinzel',serif;
