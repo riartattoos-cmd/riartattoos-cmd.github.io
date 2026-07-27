@@ -4,202 +4,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RIAR TATTOOS</title>
+<title>RIAR TATTOOS | Premium Tattoo Studio</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-background:#000;
-color:#fff;
-font-family:Georgia,serif;
-}
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px 20px;
-background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9));
-}
-
-.hero img{
-width:220px;
-margin-bottom:30px;
-}
-
-.hero h1{
-font-size:60px;
-color:#d4af37;
-letter-spacing:4px;
-margin-bottom:20px;
-}
-
-.hero .tagline{
-font-size:24px;
-line-height:1.8;
-margin-bottom:15px;
-}
-
-.hero .sub{
-font-size:20px;
-color:#ccc;
-line-height:1.8;
-margin-bottom:35px;
-}
-
-.btn{
-display:inline-block;
-padding:16px 45px;
-background:#d4af37;
-color:#000;
-text-decoration:none;
-font-weight:bold;
-font-size:20px;
-border-radius:40px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#fff;
-transform:scale(1.05);
-}
-
-section{
-padding:80px 20px;
-text-align:center;
-max-width:1000px;
-margin:auto;
-}
-
-h2{
-font-size:42px;
-color:#d4af37;
-margin-bottom:30px;
-}
-
-ul{
-list-style:none;
-}
-
-ul li{
-font-size:24px;
-margin:18px 0;
-}
-
-.about p{
-font-size:22px;
-line-height:1.8;
-margin:15px 0;
-}
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-margin-top:30px;
-}
-
-.gallery-grid img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:12px;
-border:2px solid #d4af37;
-}
-
-footer{
-background:#111;
-padding:25px;
-text-align:center;
-color:#888;
-margin-top:60px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<section class="hero">
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
 
 <img src="riartattoos.png?v=3" alt="RIAR TATTOOS">
 
-<h1>RIAR TATTOOS</h1>
-
-<p class="tagline">
-Premium Tattoo Studio<br>
-PMU • Fine Line Art
-</p>
-
-<p class="sub">
-Ladies Only Studio<br>
-Booking Only Through Instagram
-</p>
-
-<a class="btn"
-href="https://instagram.com/riartattoos"
-target="_blank">
-BOOK NOW
-</a>
-
-</section>
-
-<section>
-
-<h2>Services</h2>
+</div>
 
 <ul>
-<li>Fine Line Tattoos</li>
-<li>Name Tattoos</li>
-<li>Permanent Makeup (PMU)</li>
-<li>Lip Tint</li>
-<li>Brows</li>
-<li>Sketch Art</li>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+
 </ul>
 
-</section>
+</nav>
 
-<section class="about">
+</header>
 
-<h2>About</h2>
+<section class="hero" id="home">
 
-<p>Luxury Ladies Only Tattoo Studio.</p>
+<div class="hero-content">
 
-<p>Booking Only Through Instagram.</p>
+<h1>RIAR TATTOOS</h1>
 
-<p>Email:<br>
-amanriar765@gmail.com</p>
+<h3>Premium Tattoo Studio</h3>
 
-</section>
+<p>
+Fine Line Tattoos • PMU • Sketch Art
+</p>
 
-<section class="gallery">
+<p>
+Luxury Ladies Only Tattoo Studio
+</p>
 
-<h2>Our Work</h2>
-
-<div class="gallery-grid">
-
-<img src="sketch1jpg.webp" alt="Sketch 1">
-<img src="sketch2jpg.webp" alt="Sketch 2">
-<img src="sketch3jpg.webp" alt="Sketch 3">
-<img src="sketch4jpg.webp" alt="Sketch 4">
+<a href="https://instagram.com/riartattoos" target="_blank" class="btn">
+BOOK NOW
+</a>
 
 </div>
 
 </section>
 
+<section id="about" class="about">
+
+<h2>ABOUT US</h2>
+
+<p>
+Welcome to RIAR TATTOOS — a luxury ladies-only tattoo studio where creativity meets precision.
+We specialize in elegant Fine Line Tattoos, Permanent Makeup (PMU), Lip Tint, Brows, and Custom Sketch Art.
+Every design is crafted with attention to detail in a clean, safe, and comfortable environment.
+</p>
+
+</section>
+
+<section id="services" class="services">
+
+<h2>OUR SERVICES</h2>
+
+<div class="service-box">
+
+<div class="card">
+<h3>Fine Line Tattoos</h3>
+<p>Minimal, elegant and timeless tattoo designs.</p>
+</div>
+
+<div class="card">
+<h3>Name Tattoos</h3>
+<p>Personalized name and lettering tattoos.</p>
+</div>
+
+<div class="card">
+<h3>Permanent Makeup</h3>
+<p>Luxury PMU including Brows & Lip Tint.</p>
+</div>
+
+<div class="card">
+<h3>Sketch Art</h3>
+<p>Custom hand-drawn artwork & tattoo concepts.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="gallery">
+
+<h2>OUR WORK</h2>
+
+<div class="gallery-grid">
+
+<img src="sketch1.webp" alt="">
+<img src="sketch2.webp" alt="">
+<img src="sketch3.webp" alt="">
+<img src="sketch4.webp" alt="">
+
+</div>
+
+</section>
+<section class="why">
+
+<h2>WHY CHOOSE RIAR TATTOOS?</h2>
+
+<div class="why-box">
+
+<div class="card">
+<h3>Premium Quality</h3>
+<p>Only high-quality equipment, inks, and hygiene standards are used.</p>
+</div>
+
+<div class="card">
+<h3>Ladies Only Studio</h3>
+<p>A safe, private, and comfortable space designed especially for women.</p>
+</div>
+
+<div class="card">
+<h3>Creative Designs</h3>
+<p>Every tattoo is custom-made to match your personality and style.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="rules">
+
+<h2>STUDIO RULES</h2>
+
+<ul>
+<li>✔ Booking by appointment only.</li>
+<li>✔ Valid ID may be required.</li>
+<li>✔ Follow the complete aftercare instructions.</li>
+<li>✔ No alcohol before your appointment.</li>
+<li>✔ Hygiene & safety are our highest priority.</li>
+</ul>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>CONTACT</h2>
+
+<p><strong>Studio:</strong> RIAR TATTOOS</p>
+
+<p><strong>Email:</strong><br>
+amanriar765@gmail.com
+</p>
+
+<p><strong>Instagram:</strong></p>
+
+<a href="https://instagram.com/riartattoos" target="_blank" class="btn">
+@riartattoos
+</a>
+
+</section>
+
+<section class="location">
+
+<h2>LOCATION</h2>
+
+<iframe
+src="https://www.google.com/maps?q=Mullanpur,Dakha,Punjab&output=embed"
+width="100%"
+height="350"
+style="border:0;border-radius:15px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
+
 <footer>
 
-© 2026 RIAR TATTOOS
+<h3>RIAR TATTOOS</h3>
+
+<p>Premium Tattoo Studio</p>
+
+<p>PMU • Fine Line Art • Sketch Art</p>
+
+<p>© 2026 RIAR TATTOOS. All Rights Reserved.</p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
