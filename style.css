@@ -55,18 +55,12 @@ transition:.3s;
 .navbar ul li a:hover{
 color:#d4af37;
 }
-.hero{
+    .hero{
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:120px 20px 80px;
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-               url("hero.png")
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background-image:url("hero.png") !important;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
 }
 .hero h1{
 font-family:'Cinzel',serif;
