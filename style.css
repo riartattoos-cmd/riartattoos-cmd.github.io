@@ -55,17 +55,19 @@ transition:.3s;
 .navbar ul li a:hover{
 color:#d4af37;
 }
-
 .hero{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 20px 80px;
-background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85));
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 80px;
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+               url("images/hero.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
-
 .hero h1{
 font-family:'Cinzel',serif;
 font-size:60px;
