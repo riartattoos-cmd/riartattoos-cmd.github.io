@@ -16,7 +16,6 @@ body{
 background:#000;
 color:#fff;
 font-family:Georgia,serif;
-text-align:center;
 }
 
 .hero{
@@ -25,62 +24,87 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:20px;
+text-align:center;
+padding:40px 20px;
+background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.9));
 }
 
 .hero img{
-width:260px;
-max-width:90%;
-margin-bottom:25px;
+width:220px;
+margin-bottom:30px;
 }
 
 .hero h1{
 font-size:60px;
 color:#d4af37;
 letter-spacing:4px;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
-.hero p{
-font-size:22px;
+.hero .tagline{
+font-size:24px;
 line-height:1.8;
 margin-bottom:15px;
 }
 
+.hero .sub{
+font-size:20px;
+color:#ccc;
+line-height:1.8;
+margin-bottom:35px;
+}
+
 .btn{
 display:inline-block;
-margin-top:25px;
 padding:16px 45px;
 background:#d4af37;
 color:#000;
 text-decoration:none;
 font-weight:bold;
-border-radius:40px;
 font-size:20px;
+border-radius:40px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#fff;
+transform:scale(1.05);
 }
 
 section{
-padding:70px 20px;
+padding:80px 20px;
+text-align:center;
 max-width:900px;
 margin:auto;
 }
 
 h2{
-color:#d4af37;
 font-size:42px;
-margin-bottom:25px;
+color:#d4af37;
+margin-bottom:30px;
 }
 
 ul{
 list-style:none;
+}
+
+ul li{
 font-size:24px;
-line-height:2;
+margin:18px 0;
+}
+
+.about p{
+font-size:22px;
+line-height:1.8;
+margin:15px 0;
 }
 
 footer{
 background:#111;
-padding:30px;
-color:#999;
+padding:25px;
+text-align:center;
+color:#888;
+margin-top:60px;
 }
 </style>
 
@@ -90,16 +114,16 @@ color:#999;
 
 <section class="hero">
 
-<img src="riartattoos.png?v=2">
+<img src="riartattoos.png?v=3" alt="RIAR TATTOOS">
 
 <h1>RIAR TATTOOS</h1>
 
-<p>
+<p class="tagline">
 Premium Tattoo Studio<br>
 PMU • Fine Line Art
 </p>
 
-<p>
+<p class="sub">
 Ladies Only Studio<br>
 Booking Only Through Instagram
 </p>
@@ -127,17 +151,13 @@ BOOK NOW
 
 </section>
 
-<section>
+<section class="about">
 
 <h2>About</h2>
 
 <p>Luxury Ladies Only Tattoo Studio.</p>
 
-<br>
-
-<p>Booking only through Instagram.</p>
-
-<br>
+<p>Booking Only Through Instagram.</p>
 
 <p>Email:<br>
 amanriar765@gmail.com</p>
