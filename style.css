@@ -115,3 +115,6 @@ color:#aaa;
 .hero-btn:hover{
     background:#fff;
 }
+.hero{
+min-height:100vh !important;
+}
