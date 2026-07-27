@@ -1,35 +1,29 @@
 // Disable right click
-document.addEventListener("contextmenu", function(e){
+document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
 });
 
-// Disable drag
-document.querySelectorAll("img").forEach(img=>{
-    img.setAttribute("draggable","false");
+// Disable image dragging
+document.querySelectorAll("img").forEach(function(img) {
+    img.setAttribute("draggable", "false");
 });
 
-// Disable common save shortcuts
-document.addEventListener("keydown",function(e){
+// Welcome message
+window.onload = function () {
+    console.log("Welcome to RIAR TATTOOS");
+};
 
-if(e.ctrlKey && (e.key==="s" || e.key==="u" || e.key==="S" || e.key==="U")){
-e.preventDefault();
-}
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-if(e.key==="F12"){
-e.preventDefault();
-}
+        const target = document.querySelector(this.getAttribute('href'));
 
-});
-
-// Fade animation
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll("section").forEach(sec=>{
-observer.observe(sec);
+        if(target){
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });
