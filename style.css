@@ -224,7 +224,28 @@ footer p{
 color:#bbb;
 margin:6px 0;
 }
+.insta-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    background:#E1306C;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+    z-index:999;
+    transition:.3s;
+}
 
+.insta-float:hover{
+    transform:scale(1.1);
+    }
 @media(max-width:768px){
 
 .navbar{
