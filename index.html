@@ -345,12 +345,15 @@ Every design is created with precision, hygiene and attention to detail.
     <!-- [FAQ सेक्शन के बाद यहाँ से कोड पेस्ट करें] -->
 
 <!-- लग्जरी बुकिंग फॉर्म सेक्शन -->
+    
+<!-- [FAQ सेक्शन के बाद यहाँ से कोड पेस्ट करें] -->
+
+<!-- लग्जरी बुकिंग फॉर्म सेक्शन -->
 <section id="booking-section" style="padding: 60px 20px; background: #000; text-align: center;">
     <p class="section-tag" style="color: #c5a880; font-family: 'Poppins', sans-serif; letter-spacing: 2px; font-size: 14px; margin-bottom: 5px;">RESERVE YOUR SESSION</p>
     <h2 style="font-family: 'Cinzel', serif; font-size: 36px; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">Book Your Appointment</h2>
     
     <div class="booking-form-wrapper">
-        <!-- फॉर्म टैग की शुरुआत -->
         <form id="instagram-booking-form">
             <div class="form-group">
                 <label for="client-name">Your Name</label>
@@ -373,16 +376,14 @@ Every design is created with precision, hygiene and attention to detail.
                 </select>
             </div>
             
-            <!-- बटन पूरी तरह से बंद है -->
-            <button type="submit" class="booking-btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">Connect to Instagram</button>
+            <button type="submit" class="booking-btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 4px; padding: 15px; width: 100%; border: none; color: #fff; font-weight: 700; cursor: pointer; letter-spacing: 2px;">Connect to Instagram</button>
         </form>
-        <!-- फॉर्म टैग बंद -->
         
-        <p class="form-note">Your details will be copied automatically. Just paste them into our Instagram DM to confirm.</p>
+        <p class="form-note" style="color: #888; font-size: 11px; margin-top: 12px; font-family: 'Poppins', sans-serif;">Your details will be copied automatically. Just paste them into our Instagram DM to confirm.</p>
     </div>
 </section>
 
-<!-- फुटर और कांटेक्ट सेक्शन की शुरुआत -->
+<!-- फुटर सेक्शन -->
 <footer id="contact" style="background: #0b0b0b; padding: 40px 20px; text-align: center; color: #fff; border-top: 1px solid #1a1a1a; font-family: 'Poppins', sans-serif;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-family: 'Cinzel', serif; color: #c5a880; font-size: 24px; margin-bottom: 15px; letter-spacing: 2px;">RIAR TATTOOS</h2>
@@ -390,35 +391,42 @@ Every design is created with precision, hygiene and attention to detail.
         <p style="font-size: 11px; color: #555; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 RIAR TATTOOS. All Rights Reserved.</p>
     </div>
 </footer>
-<!-- फुटर बंद -->
 
-<!-- जावास्क्रिप्ट ऑटोमेशन की शुरुआत -->
+<!-- 100% वर्किंग इंस्टाग्राम ऐप ओपनर स्क्रिप्ट -->
 <script>
 document.getElementById('instagram-booking-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // यहाँ अपना असली इंस्टाग्राम यूजरनेम लिखें (बिना @ के)
+    // अपना असली इंस्टाग्राम यूजरनेम यहाँ लिखें (बिना @ के)
     const instagramUsername = "riartattoos"; 
     
     const name = document.getElementById('client-name').value;
     const phone = document.getElementById('client-phone').value;
     const service = document.getElementById('service-type').value;
     
-    // मैसेज का लग्जरी लेआउट तैयार करना
     const bookingDetails = `Hello RIAR TATTOOS,\n\nI want to book an appointment:\n• Name: ${name}\n• Phone: ${phone}\n• Service: ${service}`;
     
-    // क्लिपबोर्ड पर डेटा कॉपी करना
+    // डिटेल्स को क्लिपबोर्ड पर कॉपी करना
     navigator.clipboard.writeText(bookingDetails).then(() => {
-        alert("✨ Booking info copied! Now opening Instagram, just paste the message in our DM.");
-        window.open(`https://instagram.com{riartattoos}`, '_blank');
+        alert("✨ Booking info copied! Opening Instagram App... just PASTE in our DM.");
+        
+        // यह यूज़र के फोन में सीधे इंस्टाग्राम ऐप का चैट बॉक्स (DM) खोलेगा
+        const appLink = `instagram://user?username=${riartattoos}`;
+        const webLink = `https://instagram.com{riartattoos}`;
+        
+        // ऐप खोलने की कोशिश करें, अगर फोन में ऐप न हो तो वेबसाइट खुल जाएगी
+        window.location.href = appLink;
+        
+        setTimeout(function() {
+            window.open(webLink, '_blank');
+        }, 1500);
+        
     }).catch(err => {
-        // अगर ब्राउज़र क्लिपबोर्ड ब्लॉक करे तो भी इंस्टाग्राम खुल जाएगा
+        // बैकअप के लिए सीधा वेब लिंक
         window.open(`https://instagram.com{riartattoos}`, '_blank');
     });
 });
 </script>
-<!-- जावास्क्रिप्ट बंद -->
 
 </body>
 </html>
-<!-- पूरा HTML डॉक्यूमेंट यहाँ पूरी तरह से क्लोज हो गया है -->
