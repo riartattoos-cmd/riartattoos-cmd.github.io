@@ -8,23 +8,24 @@
 
 <title>RIAR TATTOOS | Luxury Tattoo Studio</title>
 
-<meta name="description" content="Luxury Ladies Only Tattoo Studio | Fine Line Tattoos | PMU | Sketch Art">
+<meta name="description" content="Luxury Ladies Only Tattoo Studio | Fine Line Tattoos | PMU">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- सोशल मीडिया आइकन्स दिखने के लिए लिंक -->
+<link rel="stylesheet" href="https://cloudflare.com">
 <link rel="stylesheet" href="style.css">
 
-<!-- फॉर्म के लिए कुछ एक्स्ट्रा प्रीमियम स्टाइलिंग -->
 <style>
 .booking-form-wrapper {
     max-width: 480px;
     margin: 30px auto 0 auto;
     padding: 30px;
     background: #111111;
-    border: 1px solid #c5a880; /* लग्जरी गोल्ड बॉर्डर */
+    border: 1px solid #c5a880; 
     border-radius: 8px;
     text-align: left;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -61,7 +62,7 @@
     display: block;
     width: 100%;
     padding: 15px;
-    background: #c5a880;
+    background: #c5a880; 
     color: #000;
     border: none;
     border-radius: 4px;
@@ -89,6 +90,103 @@
 }
 html {
     scroll-behavior: smooth;
+}
+.custom-service-grid {
+    display: grid !important; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important; 
+    gap: 30px !important; 
+    max-width: 1200px !important; 
+    margin: 0 auto !important;
+}
+.custom-service-card {
+    background: #111 !important; 
+    padding: 20px !important; 
+    border-radius: 8px !important; 
+    border: 1px solid #222 !important; 
+    text-align: left !important;
+}
+.custom-service-img {
+    width: 100% !important; 
+    height: 250px !important; 
+    object-fit: cover !important; 
+    border-radius: 4px !important; 
+    margin-bottom: 15px !important; 
+    border: 1px solid #c5a880 !important;
+    display: block !important;
+}
+.header-socials {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
+}
+.header-socials a, .footer-socials a, .contact-socials a {
+    color: #c5a880;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.header-socials a {
+    font-size: 20px;
+}
+.header-socials a:hover, .footer-socials a:hover, .contact-socials a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+.footer-socials a {
+    font-size: 28px;
+}
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.contact-socials a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background: #111;
+    color: #c5a880;
+    padding: 12px 25px;
+    border: 1px solid #c5a880;
+    border-radius: 4px;
+    width: 240px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.contact-socials a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* गैलरी इमेजेस का साइज छोटा करने के लिए कस्टम स्टाइल */
+.compact-gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+    gap: 15px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 0 10px;
+}
+.compact-gallery-img {
+    width: 100% !important;
+    height: 200px !important; /* छोटा और फिक्स किया हुआ हाइट */
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    border: 1px solid #222 !important;
+    transition: 0.3s !important;
+}
+.compact-gallery-img:hover {
+    border-color: #c5a880 !important;
+    transform: scale(1.03);
 }
 </style>
 
@@ -118,6 +216,12 @@ html {
 
 </ul>
 
+<div class="header-socials">
+    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+</div>
+
 </nav>
 
 </header>
@@ -134,14 +238,13 @@ html {
 
         <h1>RIAR<br>TATTOOS</h1>
 
-        <h2>Fine Line Tattoos • PMU • Sketch Art</h2>
+        <h2>Fine Line Tattoos • PMU</h2>
 
         <p class="hero-text">
             Premium tattoo experience where creativity, precision and luxury come together.
         </p>
 
         <div class="hero-buttons">
-            <!-- अब यह बटन सीधे नीचे फॉर्म पर लेकर जाएगा -->
             <a href="#booking-section" class="btn">
                 BOOK NOW
             </a>
@@ -169,7 +272,7 @@ html {
 
 <p>
 Welcome to <strong>RIAR TATTOOS</strong> — a premium ladies-only tattoo studio where creativity meets perfection.
-We specialize in Fine Line Tattoos, Permanent Makeup (PMU), Brows, Lip Blush and Custom Sketch Art.
+We specialize in Fine Line Tattoos, Permanent Makeup (PMU), Brows, and Lip Blush.
 Every design is created with precision, hygiene and attention to detail.
 </p>
 
@@ -195,51 +298,61 @@ Every design is created with precision, hygiene and attention to detail.
 </div>
 
 </section>
-<!-- फ़ोटो के साथ अपग्रेड किया गया लग्जरी सर्विसेज सेक्शन -->
+
+<!-- आपकी असली 4 फ़ोटोज़ के साथ सर्विसेज सेक्शन -->
 <section id="services" class="services" style="padding: 60px 20px; background: #000; text-align: center; color: #fff;">
 
 <p class="section-tag" style="color: #c5a880; font-family: 'Poppins', sans-serif; letter-spacing: 2px; font-size: 14px; margin-bottom: 5px;">OUR SERVICES</p>
 
 <h2 style="font-family: 'Cinzel', serif; font-size: 36px; color: #fff; margin-bottom: 40px; letter-spacing: 1px;">Luxury Services</h2>
 
-<div class="service-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+<div class="custom-service-grid">
 
-<div class="service-card" style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #222; text-align: left;">
-<img src="fineline.jpg" alt="Fine Line Tattoos" style="width:100%; border-radius:4px; margin-bottom:15px; border:1px solid #c5a880;">
+<!-- 1. Fine Line & Name Tattoos Card -->
+<div class="custom-service-card">
+<img src="name.jpg" alt="Fine Line Tattoos" class="custom-service-img">
 <h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Fine Line & Name Tattoos</h3>
 <p style="font-size: 14px; color: #ccc; line-height: 1.6;">Elegant minimal tattoos and beautiful personalized lettering designs crafted with precision.</p>
 </div>
 
-<div class="service-card" style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #222; text-align: left;">
-<img src="lipblush.jpg" alt="Lip Blush" style="width:100%; border-radius:4px; margin-bottom:15px; border:1px solid #c5a880;">
+<!-- 2. Lip Blush Card -->
+<div class="custom-service-card">
+<img src="lipblush.jpg" alt="Lip Blush" class="custom-service-img">
 <h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Lip Blush Treatment</h3>
 <p style="font-size: 14px; color: #ccc; line-height: 1.6;">Soft, natural and long-lasting lip enhancement using premium pigments.</p>
 </div>
 
-<div class="service-card" style="background: #111; padding: 20px; border-radius: 8px; border: 1px solid #222; text-align: left;">
-<img src="microblading.jpg" alt="Permanent Makeup" style="width:100%; border-radius:4px; margin-bottom:15px; border:1px solid #c5a880;">
-<h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Eyebrows & Eyeliner PMU</h3>
-<p style="font-size: 14px; color: #ccc; line-height: 1.6;">Natural luxury brows and sharp eyeliner with modern permanent makeup techniques.</p>
+<!-- 3. Eyebrows PMU Card -->
+<div class="custom-service-card">
+<img src="microblading.jpg" alt="Microblading Eyebrows" class="custom-service-img">
+<h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Luxury Eyebrows PMU</h3>
+<p style="font-size: 14px; color: #ccc; line-height: 1.6;">Natural luxury brows created with modern permanent makeup and microblading techniques.</p>
+</div>
+
+<!-- 4. Eyeliner PMU Card -->
+<div class="custom-service-card">
+<img src="eyeliner.jpg" alt="Permanent Eyeliner" class="custom-service-img">
+<h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Permanent Eyeliner</h3>
+<p style="font-size: 14px; color: #ccc; line-height: 1.6;">Sharp, elegant, and smudge-proof permanent eyeliner to enhance your everyday look.</p>
 </div>
 
 </div>
 
 </section>
-    
-</section>
 
-<section id="gallery" class="gallery">
+<!-- साइज छोटा किया गया नया गैलरी सेक्शन -->
+<section id="gallery" class="gallery" style="padding: 60px 20px;">
 
 <p class="section-tag">OUR WORK</p>
 
 <h2>Gallery</h2>
 
-<div class="gallery-grid">
+<div class="compact-gallery-grid">
 
-<img src="sketch1jpg.webp" alt="sketch">
-<img src="sketch2jpg.webp" alt="Sketch">
-<img src="sketch3jpg.webp" alt="sketch">
-<img src="sketch4jpg.webp" alt="sketch">
+<img src="sketch1jpg.webp" alt="sketch" class="compact-gallery-img">
+<img src="sketch2jpg.webp" alt="Sketch" class="compact-gallery-img">
+<img src="sketch3jpg.webp" alt="sketch" class="compact-gallery-img">
+<img src="sketch4jpg.webp" alt="sketch" class="compact-gallery-img">
 
 </div>
 
@@ -271,262 +384,3 @@ Every design is created with precision, hygiene and attention to detail.
 <div class="service-card">
 <h3>04</h3>
 <p>Aftercare Guidance</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="why">
-
-<p class="section-tag">WHY CHOOSE US</p>
-
-<h2>Why RIAR TATTOOS?</h2>
-
-<div class="service-grid">
-
-<div class="service-card">
-<h3>Premium Quality</h3>
-<p>Only premium inks & sterile equipment.</p>
-</div>
-
-<div class="service-card">
-<h3>Luxury Studio</h3>
-<p>Comfortable ladies-only environment.</p>
-</div>
-
-<div class="service-card">
-<h3>Custom Designs</h3>
-<p>Every artwork is uniquely designed.</p>
-</div>
-
-<div class="service-card">
-<h3>Safe & Hygienic</h3>
-<p>100% hygiene standards followed.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="faq">
-
-<p class="section-tag">FAQ</p>
-
-<h2>Frequently Asked Questions</h2>
-
-<div class="service-grid">
-
-<div class="service-card">
-<h3>Do I need an appointment?</h3>
-<p>Yes, all services are by appointment.</p>
-</div>
-
-<div class="service-card">
-<h3>Starting Price?</h3>
-<p>Fine Line Tattoos start from ₹2000.</p>
-</div>
-
-<div class="service-card">
-<h3>Healing Time?</h3>
-<p>Normally 2–4 weeks with proper aftercare.</p>
-</div>
-
-<div class="service-card">
-<h3>Is PMU Safe?</h3>
-<p>Yes, we use premium products and maintain strict hygiene.</p>
-</div>
-
-</div>
-
-</section>
-    
-<!-- नया और अपग्रेडेड लग्जरी बुकिंग फॉर्म सेक्शन -->
-<section class="booking" id="booking-section">
-
-<p class="section-tag">BOOK NOW</p>
-
-<h2>Book Your Appointment</h2>
-
-<p class="booking-text">
-Fill in your details below to schedule your premium session. Your request will open directly in our Instagram DM.
-</p>
-
-<div class="booking-form-wrapper">
-    <div class="form-group">
-        <label for="client_name">Your Name</label>
-        <input type="text" id="client_name" placeholder="Enter your full name">
-    </div>
-    
-    <div class="form-group">
-        <label for="client_phone">Phone Number</label>
-        <input type="tel" id="client_phone" placeholder="Enter your mobile number">
-    </div>
-    
-    <div class="form-group">
-        <label for="client_service">Select Service</label>
-        <select id="client_service">
-            <option value="Fine Line Tattoo">Fine Line Tattoo (Starts ₹2000)</option>
-            <option value="Name Tattoo">Name Tattoo</option>
-            <option value="Lip Blush">Lip Blush Treatment</option>
-            <option value="Eyebrows PMU">Permanent Eyebrows</option>
-            <option value="Custom Sketch Art">Custom Sketch Art</option>
-        </select>
-    </div>
-    
-    <button class="booking-btn" onclick="processStudioBooking()">
-        Send Request via Instagram
-    </button>
-    
-    <p class="form-note">
-        * Clicking will auto-copy your details. Just 'Paste' & send once Instagram opens.
-    </p>
-</div>
-
-</section>
-
-<section class="reviews">
-
-<p class="section-tag">CLIENT REVIEWS</p>
-
-<h2>What Clients Say</h2>
-
-<div class="service-grid">
-
-<div class="service-card">
-<h3>★★★★★</h3>
-<p>Professional work, clean environment and beautiful tattoo.</p>
-</div>
-
-<div class="service-card">
-<h3>★★★★★</h3>
-<p>Absolutely loved my PMU. Highly recommended.</p>
-</div>
-
-<div class="service-card">
-<h3>★★★★★</h3>
-<p>Very friendly artist and amazing fine line work.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="contact">
-
-<p class="section-tag">CONTACT</p>
-
-<h2>Let's Connect</h2>
-
-<p>Email</p>
-
-<p>
-<strong>
-amanriar765@gmail.com
-</strong>
-</p>
-
-<p style="margin-top:25px;">
-Instagram
-</p>
-
-<a href="https://instagram.com/riartattoos"
-target="_blank"
-class="btn">
-
-@riartattoos
-
-</a>
-
-</section>
-
-<footer>
-
-<div class="footer-logo">
-
-<img src="riartattoos.png" alt="Logo">
-
-</div>
-
-<h3>RIAR TATTOOS</h3>
-
-<p>
-Premium Tattoo Studio
-</p>
-
-<p>
-Fine Line Tattoos • PMU • Sketch Art
-</p>
-
-<p>
-By Appointment Only
-</p>
-
-<p style="margin-top:20px;">
-© 2026 RIAR TATTOOS. All Rights Reserved.
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-<!-- पूरी तरह से अपडेटेड जादुई जावास्क्रिप्ट कोड -->
-<script>
-function processStudioBooking() {
-    var name = document.getElementById('client_name').value.trim();
-    var phone = document.getElementById('client_phone').value.trim();
-    var service = document.getElementById('client_service').value;
-
-    if (name === "" || phone === "") {
-        alert("Please enter your name and phone number to continue.");
-        return;
-    }
-
-    var messageText = "✨ NEW BOOKING REQUEST ✨\n\n" +
-                       "👤 Name: " + name + "\n" +
-                       "📞 Phone: " + phone + "\n" +
-                       "🎨 Service: " + service + "\n\n" +
-                       "Please let me know the available slots! 💕";
-
-    // इंस्टाग्राम पर भेजने के लिए यूनिवर्सल लिंक (यह सीधे ऐप खोलता है)
-    var instagramTargetUrl = "https://ig.me";
-
-    // आधुनिक और सुरक्षित कॉपी करने का तरीका जो हर ब्राउज़र में काम करता है
-    if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(messageText).then(function() {
-            alert("🎉 Your details are copied successfully!\n\nJust 'Paste' it directly into our Instagram DM.");
-            window.location.href = instagramTargetUrl;
-        }).catch(function(err) {
-            // अगर कॉपी फेल भी हो जाए, तो भी इंस्टाग्राम खुलना चाहिए
-            fallbackCopyAndRedirect(messageText, instagramTargetUrl);
-        });
-    } else {
-        // पुराने या इन-ऐप ब्राउज़र्स के लिए बैकअप तरीका
-        fallbackCopyAndRedirect(messageText, instagramTargetUrl);
-    }
-}
-
-// बैकअप फंक्शन जो टेक्स्ट को बैकग्राउंड में सेलेक्ट करके कॉपी करता है
-function fallbackCopyAndRedirect(text, targetUrl) {
-    var textArea = document.createElement("textarea");
-    textArea.value = text;
-    // स्क्रीन से बाहर रखने के लिए स्टाइलिंग
-    textArea.style.position = "fixed";
-    textArea.style.top = "-999999px";
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-        document.execCommand('copy');
-        alert("🎉 Details auto-copied!\n\nPaste it into our Instagram DM.");
-    } catch (err) {
-        // अगर कॉपी बिल्कुल काम नहीं कर रही, तो कस्टमर को लिखकर बता देंगे
-        alert("Redirecting to Instagram! Please drop us a 'Hi' with your name.");
-    }
-    
-    document.body.removeChild(textArea);
-    window.location.href = targetUrl;
-}
-</script>
-
