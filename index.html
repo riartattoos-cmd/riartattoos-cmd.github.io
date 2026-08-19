@@ -77,25 +77,36 @@
 </footer>
 
 <!-- Interactive Automation Script -->
+<!-- इंस्टाग्राम इंटीग्रेशन स्क्रिप्ट -->
 <script>
 document.getElementById('whatsapp-booking-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Replace with your real WhatsApp business number (include country code, exclude +, spaces, or dashes)
-    // Example: '919876543210' for India
-    const whatsappNumber = '910000000000'; 
+    // अपनी इंस्टाग्राम प्रोफाइल का यूज़रनेम यहाँ डालें (बिना @ के)
+    const instagramUsername = "YOUR_INSTAGRAM_USERNAME"; 
     
-    const name = document.getElementById('client-name').value;
-    const service = document.getElementById('service-type').value;
-    const date = document.getElementById('booking-date').value;
+    // फॉर्म से डेटा निकालना
+    const name = document.getElementById('client-name')?.value || "Not Provided";
+    const service = document.getElementById('service-type')?.value || "Not Provided";
+    const date = document.getElementById('booking-date')?.value || "Not Provided";
     
-    // Structure a highly polished, luxurious message for the business dashboard
-    const message = `Hello RIAR TATTOOS,%0A%0AI would like to book a luxury session:%0A%0A• *Name:* ${encodeURIComponent(name)}%0A• *Service:* ${encodeURIComponent(service)}%0A• *Preferred Date:* ${encodeURIComponent(date)}%0A%0APlease let me know available slots. Thank you!`;
+    // इंस्टाग्राम के लिए एक शानदार लग्जरी मैसेज फॉर्मेट तैयार करना
+    const bookingDetails = `Hello RIAR TATTOOS,\n\nI would like to book a luxury session:\n• Name: ${name}\n• Service: ${service}\n• Preferred Date: ${date}\n\nPlease let me know available slots.`;
     
-    // Open the official WhatsApp API link string matching mobile or desktop browsers
-    window.open(`https://whatsapp.com{whatsappNumber}&text=${message}`, '_blank');
+    // यूज़र के क्लिपबोर्ड पर मैसेज को ऑटोमैटिक कॉपी करना
+    navigator.clipboard.writeText(bookingDetails).then(() => {
+        alert("✨ Booking details copied to clipboard!\nOpening Instagram... Just paste the message in our DM.");
+        
+        // इंस्टाग्राम इनबॉक्स या प्रोफाइल लिंक पर रीडायरेक्ट करना
+        window.open(`https://instagram.com{instagramUsername}`, '_blank');
+    }).catch(err => {
+        // अगर ब्राउज़र क्लिपबोर्ड सपोर्ट न करे तो डायरेक्ट लिंक खोलना
+        window.open(`https://instagram.com{instagramUsername}`, '_blank');
+    });
 });
 </script>
+
+<!-- जावास्क्रिप्ट बंद -->
 
 </body>
 </html>
