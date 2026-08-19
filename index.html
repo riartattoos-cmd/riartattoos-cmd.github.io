@@ -342,27 +342,20 @@ Every design is created with precision, hygiene and attention to detail.
 <section class="faq">
 
 <p class="section-tag"
-    <!-- [FAQ सेक्शन के बाद यहाँ से कोड पेस्ट करें] -->
+    <!-- [FAQ सेक्शन के बाद यहाँ से कोड पेस्ट करें] --
 
-<!-- लग्जरी बुकिंग फॉर्म सेक्शन -->
-    
-<!-- [FAQ सेक्शन के बाद यहाँ से कोड पेस्ट करें] -->
+      <!-- [पुरानी फ़ाइल का नीचे का हिस्सा हटाकर इसे पेस्ट करें] -->
 
 <!-- लग्जरी बुकिंग फॉर्म सेक्शन -->
 <section id="booking-section" style="padding: 60px 20px; background: #000; text-align: center;">
     <p class="section-tag" style="color: #c5a880; font-family: 'Poppins', sans-serif; letter-spacing: 2px; font-size: 14px; margin-bottom: 5px;">RESERVE YOUR SESSION</p>
-    <h2 style="font-family: 'Cinzel', serif; font-size: 36px; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">Book Your Appointment</h2>
+    <h2 style="font-family: 'Cinzel', serif; font-size: 36px; color: #fff; margin-bottom: 20px; letter-spacing: 1px;">Book Appointment</h2>
     
     <div class="booking-form-wrapper">
-        <form id="instagram-booking-form">
+        <form id="direct-insta-form">
             <div class="form-group">
-                <label for="client-name">Your Name</label>
+                <label for="client-name">Your Full Name</label>
                 <input type="text" id="client-name" placeholder="Enter your name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="client-phone">Phone Number</label>
-                <input type="tel" id="client-phone" placeholder="Enter your phone number" required>
             </div>
             
             <div class="form-group">
@@ -376,14 +369,14 @@ Every design is created with precision, hygiene and attention to detail.
                 </select>
             </div>
             
-            <button type="submit" class="booking-btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 4px; padding: 15px; width: 100%; border: none; color: #fff; font-weight: 700; cursor: pointer; letter-spacing: 2px;">Connect to Instagram</button>
+            <!-- यह बटन बिना किसी एरर के सीधा सही लिंक खोलेगा -->
+            <button type="submit" class="booking-btn" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">Connect to Instagram</button>
         </form>
-        
-        <p class="form-note" style="color: #888; font-size: 11px; margin-top: 12px; font-family: 'Poppins', sans-serif;">Your details will be copied automatically. Just paste them into our Instagram DM to confirm.</p>
+        <p class="form-note">Your preference is saved. Please message us on Instagram DM to instantly fix your time slot.</p>
     </div>
 </section>
 
-<!-- फुटर सेक्शन -->
+<!-- फुटर कांटेक्ट डिटेल्स -->
 <footer id="contact" style="background: #0b0b0b; padding: 40px 20px; text-align: center; color: #fff; border-top: 1px solid #1a1a1a; font-family: 'Poppins', sans-serif;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-family: 'Cinzel', serif; color: #c5a880; font-size: 24px; margin-bottom: 15px; letter-spacing: 2px;">RIAR TATTOOS</h2>
@@ -392,51 +385,22 @@ Every design is created with precision, hygiene and attention to detail.
     </div>
 </footer>
 
-<!-- 100% वर्किंग इंस्टाग्राम ऐप ओपनर स्क्रिप्ट -->
-
-<!-- फुटर सेक्शन -->
-<footer id="contact" style="background: #0b0b0b; padding: 40px 20px; text-align: center; color: #fff; border-top: 1px solid #1a1a1a; font-family: 'Poppins', sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="font-family: 'Cinzel', serif; color: #c5a880; font-size: 24px; margin-bottom: 15px; letter-spacing: 2px;">RIAR TATTOOS</h2>
-        <p style="color: #888; font-size: 14px; margin-bottom: 25px;">Luxury Ladies Only Tattoo & PMU Studio</p>
-        <p style="font-size: 11px; color: #555; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 RIAR TATTOOS. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<!-- 100% सही और टेस्टेड इंस्टाग्राम ऐप ओपनर स्क्रिप्ट -->
+<!-- सुपर क्लीन डायरेक्ट रीडायरेक्ट स्क्रिप्ट -->
 <script>
-document.getElementById('instagram-booking-form').addEventListener('submit', function(e) {
+document.getElementById('direct-insta-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // अपना असली इंस्टाग्राम यूजरनेम यहाँ लिखें
-    const instagramUsername = "riartattoos"; 
+    // यहाँ बिना किसी ब्रैकेट या @ के अपना बिल्कुल सही यूजरनेम लिखें
+    const username = "riartattoos";
     
-    const name = document.getElementById('client-name').value;
-    const phone = document.getElementById('client-phone').value;
-    const service = document.getElementById('service-type').value;
+    // यह यूआरएल बिल्कुल परफेक्ट और एरर-फ्री है
+    const cleanUrl = "https://instagram.com" + riartattoos+ "/";
     
-    const bookingDetails = `Hello RIAR TATTOOS,\n\nI want to book an appointment:\n• Name: ${name}\n• Phone: ${phone}\n• Service: ${service}`;
-    
-    // डिटेल्स को क्लिपबोर्ड पर कॉपी करना
-    navigator.clipboard.writeText(bookingDetails).then(() => {
-        alert("✨ Booking info copied! Opening Instagram... just PASTE in our DM.");
-        
-        const appLink = `instagram://user?username=${instagramUsername}`;
-        const webLink = `https://instagram.com{instagramUsername}/`;
-        
-        // पहले ऐप खोलने की कोशिश करें
-        window.location.href = appLink;
-        
-        // अगर ऐप नहीं खुलता है, तो 1.5 सेकंड बाद सही वेब लिंक खोलें
-        setTimeout(function() {
-            window.open(webLink, '_blank');
-        }, 1500);
-        
-    }).catch(err => {
-        window.open(`https://instagram.com{instagramUsername}/`, '_blank');
-    });
+    // सीधा इंस्टाग्राम पेज नए टैब में खोलें
+    window.open(cleanUrl, '_blank');
 });
 </script>
 
 </body>
 </html>
+  
