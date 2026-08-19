@@ -480,7 +480,7 @@ By Appointment Only
 
 <script src="script.js"></script>
 
-<!-- ऑटो-कॉपी और इंस्टाग्राम डीएम स्क्रिप्ट -->
+<!-- पूरी तरह से अपडेटेड जादुई जावास्क्रिप्ट कोड -->
 <script>
 function processStudioBooking() {
     var name = document.getElementById('client_name').value.trim();
@@ -494,3 +494,49 @@ function processStudioBooking() {
 
     var messageText = "✨ NEW BOOKING REQUEST ✨\n\n" +
                        "👤 Name: " + name + "\n" +
+                       "📞 Phone: " + phone + "\n" +
+                       "🎨 Service: " + service + "\n\n" +
+                       "Please let me know the available slots! 💕";
+
+    // इंस्टाग्राम पर भेजने के लिए यूनिवर्सल लिंक (यह सीधे ऐप खोलता है)
+    var instagramTargetUrl = "https://ig.me";
+
+    // आधुनिक और सुरक्षित कॉपी करने का तरीका जो हर ब्राउज़र में काम करता है
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(messageText).then(function() {
+            alert("🎉 Your details are copied successfully!\n\nJust 'Paste' it directly into our Instagram DM.");
+            window.location.href = instagramTargetUrl;
+        }).catch(function(err) {
+            // अगर कॉपी फेल भी हो जाए, तो भी इंस्टाग्राम खुलना चाहिए
+            fallbackCopyAndRedirect(messageText, instagramTargetUrl);
+        });
+    } else {
+        // पुराने या इन-ऐप ब्राउज़र्स के लिए बैकअप तरीका
+        fallbackCopyAndRedirect(messageText, instagramTargetUrl);
+    }
+}
+
+// बैकअप फंक्शन जो टेक्स्ट को बैकग्राउंड में सेलेक्ट करके कॉपी करता है
+function fallbackCopyAndRedirect(text, targetUrl) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    // स्क्रीन से बाहर रखने के लिए स्टाइलिंग
+    textArea.style.position = "fixed";
+    textArea.style.top = "-999999px";
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        document.execCommand('copy');
+        alert("🎉 Details auto-copied!\n\nPaste it into our Instagram DM.");
+    } catch (err) {
+        // अगर कॉपी बिल्कुल काम नहीं कर रही, तो कस्टमर को लिखकर बता देंगे
+        alert("Redirecting to Instagram! Please drop us a 'Hi' with your name.");
+    }
+    
+    document.body.removeChild(textArea);
+    window.location.href = targetUrl;
+}
+</script>
+
