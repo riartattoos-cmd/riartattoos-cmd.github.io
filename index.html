@@ -15,7 +15,7 @@
 
 <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- सोशल मीडिया आइकन्स दिखने के लिए लिंक -->
+<!-- सोशल मीडिया आइकन्स के लिए FontAwesome लिंक -->
 <link rel="stylesheet" href="https://cloudflare.com">
 <link rel="stylesheet" href="style.css">
 
@@ -114,6 +114,7 @@ html {
     border: 1px solid #c5a880 !important;
     display: block !important;
 }
+/* सोशल मीडिया लिंक्स बार की सुंदर स्टाइलिंग */
 .header-socials {
     display: flex;
     gap: 18px;
@@ -121,7 +122,7 @@ html {
     margin-left: auto;
     padding-right: 20px;
 }
-.header-socials a, .footer-socials a, .contact-socials a {
+.header-socials a, .footer-socials a {
     color: #c5a880;
     transition: 0.3s;
     text-decoration: none;
@@ -129,7 +130,7 @@ html {
 .header-socials a {
     font-size: 20px;
 }
-.header-socials a:hover, .footer-socials a:hover, .contact-socials a:hover {
+.header-socials a:hover, .footer-socials a:hover {
     color: #fff;
     transform: translateY(-2px);
 }
@@ -142,32 +143,8 @@ html {
 .footer-socials a {
     font-size: 28px;
 }
-.contact-socials {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-.contact-socials a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    background: #111;
-    color: #c5a880;
-    padding: 12px 25px;
-    border: 1px solid #c5a880;
-    border-radius: 4px;
-    width: 240px;
-    text-align: center;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-.contact-socials a i {
-    margin-right: 10px;
-    font-size: 18px;
-}
 
-/* गैलरी इमेजेस का साइज छोटा करने के लिए कस्टम स्टाइल */
+/* गैलरी इमेजेस का छोटा कॉम्पैक्ट साइज */
 .compact-gallery-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
@@ -178,7 +155,7 @@ html {
 }
 .compact-gallery-img {
     width: 100% !important;
-    height: 200px !important; /* छोटा और फिक्स किया हुआ हाइट */
+    height: 200px !important; 
     object-fit: cover !important;
     border-radius: 6px !important;
     border: 1px solid #222 !important;
@@ -216,10 +193,11 @@ html {
 
 </ul>
 
+<!-- हेडर बार: इंस्टाग्राम, फेसबुक और यूट्यूब -->
 <div class="header-socials">
-    <a href="https://www.instagram.com/riartattoos?igsi=cm54dXg2c2R5dDBu" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/share/1DPThh6M8G/"target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://youtube.com/@riartattoos?si=qFAPwOFloq1a0oiO" target="_blank" ho  class="fab fa-youtube"></i></a>
+    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
 </div>
 
 </nav>
@@ -308,28 +286,28 @@ Every design is created with precision, hygiene and attention to detail.
 
 <div class="custom-service-grid">
 
-<!-- 1. Fine Line & Name Tattoos Card -->
+<!-- 1. Fine Line & Name Tattoos Card (name.jpg) -->
 <div class="custom-service-card">
 <img src="name.jpg" alt="Fine Line Tattoos" class="custom-service-img">
 <h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Fine Line & Name Tattoos</h3>
 <p style="font-size: 14px; color: #ccc; line-height: 1.6;">Elegant minimal tattoos and beautiful personalized lettering designs crafted with precision.</p>
 </div>
 
-<!-- 2. Lip Blush Card -->
+<!-- 2. Lip Blush Card (lipblush.jpg) -->
 <div class="custom-service-card">
 <img src="lipblush.jpg" alt="Lip Blush" class="custom-service-img">
 <h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Lip Blush Treatment</h3>
 <p style="font-size: 14px; color: #ccc; line-height: 1.6;">Soft, natural and long-lasting lip enhancement using premium pigments.</p>
 </div>
 
-<!-- 3. Eyebrows PMU Card -->
+<!-- 3. Eyebrows PMU Card (microblading.jpg) -->
 <div class="custom-service-card">
 <img src="microblading.jpg" alt="Microblading Eyebrows" class="custom-service-img">
 <h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Luxury Eyebrows PMU</h3>
 <p style="font-size: 14px; color: #ccc; line-height: 1.6;">Natural luxury brows created with modern permanent makeup and microblading techniques.</p>
 </div>
 
-<!-- 4. Eyeliner PMU Card -->
+<!-- 4. Eyeliner PMU Card (eyeliner.jpg) -->
 <div class="custom-service-card">
 <img src="eyeliner.jpg" alt="Permanent Eyeliner" class="custom-service-img">
 <h3 style="color: #c5a880; font-family: 'Cinzel', serif; margin-bottom: 10px;">Permanent Eyeliner</h3>
@@ -340,7 +318,7 @@ Every design is created with precision, hygiene and attention to detail.
 
 </section>
 
-<!-- साइज छोटा किया गया नया गैलरी सेक्शन -->
+<!-- कॉम्पैक्ट गैलरी सेक्शन -->
 <section id="gallery" class="gallery" style="padding: 60px 20px;">
 
 <p class="section-tag">OUR WORK</p>
@@ -384,3 +362,29 @@ Every design is created with precision, hygiene and attention to detail.
 <div class="service-card">
 <h3>04</h3>
 <p>Aftercare Guidance</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="why">
+
+<p class="section-tag">WHY CHOOSE US</p>
+
+<h2>Why RIAR TATTOOS?</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+<h3>Premium Quality</h3>
+<p>Only premium inks & sterile equipment.</p>
+</div>
+
+<div class="service-card">
+<h3>Luxury Studio</h3>
+<p>Comfortable ladies-only environment.</p>
+</div>
+
+<div class="service-card">
+<h3>Custom Designs</h3>
