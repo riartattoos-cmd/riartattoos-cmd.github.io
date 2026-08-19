@@ -17,6 +17,81 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- फॉर्म के लिए कुछ एक्स्ट्रा प्रीमियम स्टाइलिंग -->
+<style>
+.booking-form-wrapper {
+    max-width: 480px;
+    margin: 30px auto 0 auto;
+    padding: 30px;
+    background: #111111;
+    border: 1px solid #c5a880; /* लग्जरी गोल्ड बॉर्डर */
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #c5a880;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: #c5a880;
+    outline: none;
+}
+.booking-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #c5a880;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+    text-align: center;
+}
+.booking-btn:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+.form-note {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #888;
+    text-align: center;
+    margin-top: 12px;
+    line-height: 1.4;
+}
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
 </head>
 
 <body>
@@ -66,7 +141,8 @@
         </p>
 
         <div class="hero-buttons">
-            <a href="https://instagram.com/riartattoos" target="_blank" class="btn">
+            <!-- अब यह बटन सीधे नीचे फॉर्म पर लेकर जाएगा -->
+            <a href="#booking-section" class="btn">
                 BOOK NOW
             </a>
 
@@ -78,7 +154,7 @@
     </div>
 
 </section>
-</section>
+
 <section id="about" class="about">
 
 <div class="about-image">
@@ -161,6 +237,7 @@ Every design is created with precision, hygiene and attention to detail.
 </div>
 
 </section>
+
 <section id="gallery" class="gallery">
 
 <p class="section-tag">OUR WORK</p>
@@ -274,20 +351,47 @@ Every design is created with precision, hygiene and attention to detail.
 
 </section>
     
-   <section class="booking">
+<!-- नया और अपग्रेडेड लग्जरी बुकिंग फॉर्म सेक्शन -->
+<section class="booking" id="booking-section">
 
 <p class="section-tag">BOOK NOW</p>
 
 <h2>Book Your Appointment</h2>
 
 <p class="booking-text">
-Ready for your next tattoo or PMU session?
-Book your appointment through Instagram.
+Fill in your details below to schedule your premium session. Your request will open directly in our Instagram DM.
 </p>
 
-<a href="https://instagram.com/riartattoos" target="_blank" class="btn">
-BOOK ON INSTAGRAM
-</a>
+<div class="booking-form-wrapper">
+    <div class="form-group">
+        <label for="client_name">Your Name</label>
+        <input type="text" id="client_name" placeholder="Enter your full name">
+    </div>
+    
+    <div class="form-group">
+        <label for="client_phone">Phone Number</label>
+        <input type="tel" id="client_phone" placeholder="Enter your mobile number">
+    </div>
+    
+    <div class="form-group">
+        <label for="client_service">Select Service</label>
+        <select id="client_service">
+            <option value="Fine Line Tattoo">Fine Line Tattoo (Starts ₹2000)</option>
+            <option value="Name Tattoo">Name Tattoo</option>
+            <option value="Lip Blush">Lip Blush Treatment</option>
+            <option value="Eyebrows PMU">Permanent Eyebrows</option>
+            <option value="Custom Sketch Art">Custom Sketch Art</option>
+        </select>
+    </div>
+    
+    <button class="booking-btn" onclick="processStudioBooking()">
+        Send Request via Instagram
+    </button>
+    
+    <p class="form-note">
+        * Clicking will auto-copy your details. Just 'Paste' & send once Instagram opens.
+    </p>
+</div>
 
 </section>
 
@@ -376,6 +480,17 @@ By Appointment Only
 
 <script src="script.js"></script>
 
-</body>
+<!-- ऑटो-कॉपी और इंस्टाग्राम डीएम स्क्रिप्ट -->
+<script>
+function processStudioBooking() {
+    var name = document.getElementById('client_name').value.trim();
+    var phone = document.getElementById('client_phone').value.trim();
+    var service = document.getElementById('client_service').value;
 
-</html> 
+    if (name === "" || phone === "") {
+        alert("Please enter your name and phone number to continue.");
+        return;
+    }
+
+    var messageText = "✨ NEW BOOKING REQUEST ✨\n\n" +
+                       "👤 Name: " + name + "\n" +
