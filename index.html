@@ -393,11 +393,22 @@ Every design is created with precision, hygiene and attention to detail.
 </footer>
 
 <!-- 100% वर्किंग इंस्टाग्राम ऐप ओपनर स्क्रिप्ट -->
+
+<!-- फुटर सेक्शन -->
+<footer id="contact" style="background: #0b0b0b; padding: 40px 20px; text-align: center; color: #fff; border-top: 1px solid #1a1a1a; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-family: 'Cinzel', serif; color: #c5a880; font-size: 24px; margin-bottom: 15px; letter-spacing: 2px;">RIAR TATTOOS</h2>
+        <p style="color: #888; font-size: 14px; margin-bottom: 25px;">Luxury Ladies Only Tattoo & PMU Studio</p>
+        <p style="font-size: 11px; color: #555; margin-top: 20px; letter-spacing: 1px;">&copy; 2026 RIAR TATTOOS. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- 100% सही और टेस्टेड इंस्टाग्राम ऐप ओपनर स्क्रिप्ट -->
 <script>
 document.getElementById('instagram-booking-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // अपना असली इंस्टाग्राम यूजरनेम यहाँ लिखें (बिना @ के)
+    // अपना असली इंस्टाग्राम यूजरनेम यहाँ लिखें
     const instagramUsername = "riartattoos"; 
     
     const name = document.getElementById('client-name').value;
@@ -408,22 +419,21 @@ document.getElementById('instagram-booking-form').addEventListener('submit', fun
     
     // डिटेल्स को क्लिपबोर्ड पर कॉपी करना
     navigator.clipboard.writeText(bookingDetails).then(() => {
-        alert("✨ Booking info copied! Opening Instagram App... just PASTE in our DM.");
+        alert("✨ Booking info copied! Opening Instagram... just PASTE in our DM.");
         
-        // यह यूज़र के फोन में सीधे इंस्टाग्राम ऐप का चैट बॉक्स (DM) खोलेगा
-        const appLink = `instagram://user?username=${riartattoos}`;
-        const webLink = `https://instagram.com{riartattoos}`;
+        const appLink = `instagram://user?username=${instagramUsername}`;
+        const webLink = `https://instagram.com{instagramUsername}/`;
         
-        // ऐप खोलने की कोशिश करें, अगर फोन में ऐप न हो तो वेबसाइट खुल जाएगी
+        // पहले ऐप खोलने की कोशिश करें
         window.location.href = appLink;
         
+        // अगर ऐप नहीं खुलता है, तो 1.5 सेकंड बाद सही वेब लिंक खोलें
         setTimeout(function() {
             window.open(webLink, '_blank');
         }, 1500);
         
     }).catch(err => {
-        // बैकअप के लिए सीधा वेब लिंक
-        window.open(`https://instagram.com{riartattoos}`, '_blank');
+        window.open(`https://instagram.com{instagramUsername}/`, '_blank');
     });
 });
 </script>
